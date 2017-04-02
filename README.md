@@ -1,1 +1,1 @@
-Some codes may not be perfect, but them actually witnessed my growth.
+Some codes may not be perfect, but they actually witnessed my growth.
