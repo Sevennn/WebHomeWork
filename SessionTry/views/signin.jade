@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Signin
+    // Bootstrap
+    link(href='stylesheets/signin.css', rel='stylesheet')
+  body
+    .container
+      form#table.form-signin(role='form',method='post', action='/signin')
+        h2 Login
+        .info
+          .Error
+          input.user-control.form-control(type='text', placeholder='用户名', required='', name="username")
+        .info
+          .Error
+          input.user-control.form-control(type='password', placeholder='密码', required='', name="password")
+        div.btn.signin-btn.btn-lg.btn-primary.btn-block(type='button') Sign in
+        div.extra
+          a.btn.signup-btn.btn-lg.btn-primary.btn-block(href="/regist") Sign up
+        script(type='text/javascript', src='/javascripts/jquery.js')
+        script(type='text/javascript', src='/javascripts/signin.js')

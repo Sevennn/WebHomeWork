@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="./css/signup.css">
+</head>
+<body>
+    <div id="Resister_area">
+        <div id="tables">
+            <form name="resister" method="post" action="/Signup" id="table">
+                <h2>Submit Information</h2>
+                <div id="name">
+                    <input type="text" name="name" class="info" required="required" placeholder="Your name">
+                    <div class="nameReminder reminder">6~18位英文字母、数字或下划线，以英文字母开头</div>
+                    <div class="Error_dis"></div>
+                </div>
+                <div id="id">
+                    <input type="text" name="id" class="info" required="required" placeholder="Your ID">
+                    <div class="nameReminder reminder">8位数字，不能以0开头</div>
+                    <div class="Error_dis"></div>
+                </div>
+                <div id="phone">
+                    <input type="text" name="phone" class="info" required="required" placeholder="Your Phone">
+                    <div class="nameReminder reminder">11位数字，不能以0开头</div>
+                    <div class="Error_dis"></div>
+                </div>
+                <div id="email">
+                    <input type="email" name="email" class="info" required="required" placeholder="Your Email">
+                    <div class="nameReminder reminder">邮箱地址遵守通用规范</div>
+                    <div class="Error_dis"></div>
+                </div>
+                <div><input type="button" id="submit" value="Sign up"></div>
+                <div><input type="reset" id="reset" value="Reset"></div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/signup.js"></script>
+</body>
+</html>

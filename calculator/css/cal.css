@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+html, body {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top right, black, #666);
+}
+#main {
+	margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: 50%;
+    width: 500px;
+    height: 500px;
+	box-shadow: 5px 5px 5px #000;
+    border: 2px solid #333;
+    border-radius: 30px;
+    background: #333;
+}
+.calc_area {
+    margin-top: 20px;
+}
+.calc_area > li{
+    width: 100%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {list-style-type: none;}
+.calc_area ul li{
+    cursor: pointer;
+    font-size: 25px;
+	color: white;
+	position: relative;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: 50%;
+    width: 90px;
+    height: 50px;
+    display: inline-block;
+}
+.calc_area ul li:first-child:before {
+	content: "";
+    width:2px;
+    height:50px;
+    position: absolute;
+    left: -5px;
+	background-image: linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,0.3),rgba(0,0,0,0));
+}
+.calc_area ul li:after {
+	content: "";
+    width:2px;
+    height:50px;
+    position: absolute;
+    right: -5px;
+	background-image: linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,0.3),rgba(0,0,0,0));
+}
+.calc_area ul li span {
+    font-size: 25px;
+
+}
+.calc_area ul {
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#display {
+    margin-top: 20px;
+    font-size: 25px;
+    color: green;
+    width: 400px;
+    height: 50px;
+	background: rgba(0,0,0,.2);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+#Result {
+    margin-right: auto;
+    margin-left: auto;
+    width: 390px;
+    height: 100%;
+	font-family:"Lucida Console", Monaco, monospace;
+}
+#Result li{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    height: 22px;
+    word-wrap: break-word;
+}
+h1 {
+	font-family:"Times New Roman", Times, serif;
+	text-align:center;
+}
+
+/*呼吸灯效果*/
+@keyframes li_dis {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1);
+    }    
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4);
+    }
+}
+
+.calc_area ul li:hover {
+    animation: li_dis 800ms ease-out infinite alternate;
+}
+

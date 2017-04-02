@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Sign up
+    link(rel='stylesheet', type='text/css', href='/stylesheets/signup.css')
+  body
+    #Resister_area
+      #tables
+        form#table(name='resister', method='post', action='/register')
+          h2 Submit Information
+          #name
+            input.info(type='text', name='username', required='required', placeholder='Your name')
+            .nameReminder.reminder 6~18位英文字母、数字或下划线，以英文字母开头
+            .Error_dis
+          #id
+            input.info(type='text', name='id', required='required', placeholder='Your ID')
+            .nameReminder.reminder 8位数字，不能以0开头
+            .Error_dis
+          #phone
+            input.info(type='text', name='phone', required='required', placeholder='Your Phone')
+            .nameReminder.reminder 11位数字，不能以0开头
+            .Error_dis
+          #email
+            input.info(type='email', name='email', required='required', placeholder='Your Email')
+            .nameReminder.reminder 邮箱地址遵守通用规范
+            .Error_dis
+          #password
+            input.info(type='password', name='password', required='required', placeholder='Your password')
+            .nameReminder.reminder 6~12位数字、大小写字母、中划线、下划线
+            .Error_dis
+          #confirmpassword
+            input.info(type='password', name='confirmpassword', required='required', placeholder='Confirm password')
+            .nameReminder.reminder
+            .Error_dis
+          div
+            input#submit(type='button', value='Sign up')
+          div
+            input#reset(type='reset', value='Reset')
+    script(type='text/javascript', src='/javascripts/jquery.js')
+    script(type='text/javascript', src='/javascripts/signup.js')

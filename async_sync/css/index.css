@@ -1,0 +1,197 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#button:hover .blank {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 230px;
+    left: 50px;
+}
+html,body,#at-plus-container {
+	height: 100%;
+	width: 100%;
+}
+.info {
+	display:block;
+}
+#at-plus-container {
+    position: absolute;
+    bottom: 90px;
+    height: 300px;
+}
+ul {
+	list-style: none;
+}
+#bottom-positioner {
+	position: relative;
+	height: 300px;
+	width:300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.apb {
+	position: absolute;
+	bottom: 0px;
+	left:135px;
+}
+.apb .icon {
+	cursor: pointer;
+	background-color: rgb(170,170,170);
+	border-radius: 50% 50%;
+	transition: all .5s 1.5s linear;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size:85% 60%;
+	background-position: 50% 50%;
+    background-image: url(../assets/images/atplus_white.png);
+}
+#button:hover .icon{
+	transform: scale(2.0,2.0);
+	background-image: url(../assets/images/atplus_green.png);
+	background-repeat: no-repeat;
+	background-size:85% 60%;
+	background-position: 50% 50%;
+	background-color: blue;
+	transition: all .5s linear;
+}
+#control-ring-container li{
+	position: absolute;
+    top: 267px;
+    left: 130px;
+	opacity: 0;
+	transition: all .5s .8s linear;
+}
+#button:hover #control-ring-container li {
+	opacity: 1;
+	transition: all .5s linear;
+}
+.click {
+	cursor: pointer;
+}
+#info-bar {
+	border-radius: 50%;
+    top: 270px;
+    width: 30px;
+    left: 135px;
+    color:#23D89E;
+    height: 30px;
+	overflow: hidden;
+    position: absolute;
+	background-color: #888;
+	opacity: 0;
+	transition: all .5s .8s linear;
+} 
+#button:hover #info-bar {
+	position: absolute;
+	top: 115px;
+	left:85px;
+	width: 130px;
+	height: 130px;
+	border-radius: 50% 50%;
+	opacity: 1;
+	transition: all .5s linear;
+}
+#control-ring li {
+	background-color: #777;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	font-size: 25px;
+	line-height: 35px;
+	border-radius: 50%;
+	position: absolute;
+}
+#control-ring li:nth-of-type(1) {
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+#button:hover #control-ring li:nth-of-type(1) {
+	left:66px;
+	top:222px;
+}
+#control-ring li:nth-of-type(2) {
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+#button:hover #control-ring li:nth-of-type(2) {
+	left:48px;
+	top:259px;
+}
+#control-ring li:nth-of-type(3) {
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+#control-ring li span {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	border-radius: 50% 50%;
+	background-color:red;
+	color: white;
+}
+
+#button:hover #control-ring li:nth-of-type(3) {
+	left:60px;
+	top:299px;
+}
+
+#control-ring li:nth-of-type(4) {
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+
+#button:hover #control-ring li:nth-of-type(4) {
+	left:96px;
+	top:330px;
+}
+
+#control-ring li:nth-of-type(5) {
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+
+#button:hover #control-ring li:nth-of-type(5) {
+	left:141px;
+	top:334px;
+}
+
+#info-bar {
+	text-align: center;
+}
+.fadeout {
+	opacity: 0;
+}
+.fadein {
+	opacity: 1;
+}
+
+#info-bar li:nth-of-type(1) {
+	margin-top: 50px;
+}
+.smallfont {
+	font-size: 15px;
+}
+.normalsize {
+	font-size: 25px;
+}
+.unread {
+	color:gray;
+	cursor:normal;
+}
+
+.active {
+	color: #23D89E;
+	cursor: pointer;
+}

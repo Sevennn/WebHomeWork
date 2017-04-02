@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Regisister
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/regisister.css')
+  body
+    #main
+      #info_dis
+        h3 User Information
+        .info
+          #name
+            | Name
+            br
+            span #{users.username}
+        .info
+          #id.info
+            | Id
+            br
+            span #{users.id}
+        .info
+          #phone.info
+            | Phone
+            br
+            span #{users.phone}
+        .info
+          #email.info
+            | Email
+            br
+            span #{users.email}
+      form#logout(method='get', action='/logout')
+        .Logout-btn Log out
+      if error
+        .Error #{error}
+    script(type='text/javascript', src='/javascripts/jquery.js')
+    script(type='text/javascript', src='/javascripts/logout.js')

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/games.css">
+</head>
+<body>
+    <div class="game_area" id="area1">
+        <p class="title">The Amazing Mouse Maze</p>
+        <p class="rules">Move your Mouse from "S" to begin.</p>
+        <p id="warnings"></p>
+        <div id="maze_position">
+            <div class="longwall wall_top wall"></div>
+            <div class="longwall wall_bottom wall"></div>
+            <div class="square_wall wall_left wall"></div>
+            <div class="square_wall wall_right wall"></div>
+            <div class="middle_wall wall"></div>
+            <div class="path_bottom path_left path">
+            </div>
+            <div class="path_bottom path_right path">
+            </div>
+            <div class="path_top path"></div>
+            <div class="path_ver ver_left path"></div>
+            <div class="path_ver ver_right path"></div>
+            <div id="end" class="mark">E</div>
+            <div id="start" class="mark">S</div>
+        </div>
+        <p class="footer">
+            The object of this game is to guide the mouse cursor through the star area and get to the end area.Be sure to avoid the walls:</p>
+        <div id="example"></div>
+        <div class="footer">Good Luck!</div>
+    </div>
+    <div class="game_area" id="area2">
+        <p class="title">Whac-a-mole</p>
+        <p class="rules">Test your skill. How many moles can you hit in 30 seconds?</p>
+        <div class="output">
+            <div class="score">Score:
+                <div id="score_dis">0</div>
+            </div>
+            <div class="times">Time:
+                <div id="times_dis">30</div>
+            </div>
+            <div id="btn">Start</div>
+            <div id="action">Over</div>
+        </div>
+        <div id="map">
+        </div>
+        <div class="mole_footer">
+            <b>Instructions:</b>
+            <ul>
+                <li>Click on the radio buttons(moles) as they are selected randomly by the computer.</li>
+                <li>1 point per hit,minus 1 point per miss.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="slider">Another Game</div>
+    <script type="text/javascript" src="./js/games.js"></script>
+</body>
+</html> 

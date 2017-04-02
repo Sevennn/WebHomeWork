@@ -1,0 +1,49 @@
+@charset "utf-8";
+        body {
+            background-image:url(../ima/silverware.jpg);
+            background-repeat:repeat;
+            background-attachment:fixed;
+        }
+
+        div {
+            height: auto;
+        }
+
+        p,li{
+            color: rgb(64,64,64);
+            font-size: 11pt;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        /*设置块标题*/
+        .head {
+            height: auto;
+
+            color: rgb(164,164,0);
+            background-color: #F0F0F0;
+            text-align: left;
+        }
+
+        /*设置对应list-style样式*/
+        body > div:nth-of-type(3) > ul > li{
+            list-style-type: decimal;
+        }
+        body > div:nth-of-type(2) li {
+            list-style-image: url(../icon/favicon.ico);
+        }
+        body > div:nth-of-type(3) > ul ul > li{
+            list-style-image: url(../icon/favicon.ico);
+        }
+        /*统一设置块标题*/
+        span {
+            letter-spacing: 0.2em;
+            font-size: 18pt;
+            font-family: Century Gothic, Futura, Verdana;
+        }
+
+        blockquote {
+            background-color:  #FFFFC8;
+            font-style:italic;
+            font-size: 11pt;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-image: url("../images/signin.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h2 {
+   color: #ED6943;
+}
+
+
+#table {
+  position: relative;
+  background-color: rgba(255,255,255,.5);
+  width: 250px;
+  height: auto;
+  margin:0 auto;
+  border-radius: 30px;
+}
+
+.container {
+  position: absolute;
+  height: 50%;
+  top: 0;bottom: 0; left: 0; right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  color: black;
+  background: none;
+  margin: 10px auto;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  transition: all .2s ease-in;
+}
+::-webkit-input-placeholder {
+  color: black;
+}
+input:focus {
+    border-bottom: 2px solid #000;
+}
+
+.user-control {
+  width: 200px;
+}
+
+
+.extra {
+  height: 50px;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  font-size:15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  color: white;
+  background-color:rgba(71,158,162,.5);
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.signin-btn:hover , .signup-btn:hover{
+    background-color:  #479ea2;
+}
+
+.Error {
+  color: red;
+}

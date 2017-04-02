@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", "Futura", Verdana;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-image: linear-gradient(rgb(255,255,255), rgb(180,200,200));
+}
+/* 提交处样式设计 */
+#submit_pic {
+    margin:0 auto;
+    width: 500px;
+}
+#pic_url {
+    width: 430px;
+    height: 20px;
+    overflow: auto;
+}
+#submit_pic button{
+    width: 50px;
+    height: 18px;
+    font-size: 10px;
+}
+/* 标题 */
+#title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+/* 游戏区域 */
+#game_area {
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    width: 800px;
+    transition: all .5s ease-in;
+}
+/* 拼图区域 */
+#jigsaw_area {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: #999;
+}
+/* 按钮样式 */
+#buttons {
+    width:112.5px;
+    margin:0 auto;
+    height: 100px;
+    line-height: 52px;
+    padding: 5px;
+}
+#reset_btn, #help {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    border: 1px solid #000;
+    border-radius: 30% 30%;
+    margin: 5px 5px;
+    cursor: pointer;
+    float: left;
+}
+#reset_btn:hover,#help:hover {
+    animation: breath 3s infinite;
+}
+/* 时间和步数展示区域 */
+#times {
+    position: absolute;
+    top: 50px;
+    right: -150px;
+    text-align: top;
+    font-size: 25px;
+    height: 25px;
+    width: 300px;
+    line-height: 25px;
+    overflow: hidden;
+}
+#times span {
+    display: inline-block;
+    width: 50px;
+    height:20px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid #000;
+    vertical-align: bottom;
+}
+#steps {
+    position: absolute;
+    top: 100px;
+    right: -150px;
+    text-align: top;
+    font-size: 25px;
+    height: 25px;
+    width: 300px;
+    line-height: 25px;
+    overflow: hidden;
+}
+#steps span {
+    display: inline-block;
+    width: 50px;
+    height:20px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 1px solid #000;
+    vertical-align: bottom;
+}
+/* 块元素的隐藏与出现 */
+.gone {
+    display: none;
+}
+.back {
+    display: block;
+}
+.pic, #blank {
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    margin: 1px 1px;
+    cursor: pointer;
+    font-size: 0px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 2px;
+    transition: all .2s ease-in;
+    background: url('../image/panda.jpg');
+    background-size: 400px 400px;
+}
+.pic_num {
+    font-size: 80px;
+}
+.pic:hover {
+    transform: scale(1.05);
+    z-index: 10000;
+}
+/* 图片定位 */
+#pic_1 {
+    background-position: 0 0;
+}
+
+#pic_2 {
+    background-position: -100px 0px;
+}
+
+#pic_3 {
+    background-position: -200px 0px;
+}
+
+#pic_4 {
+    background-position: -300px 0px;
+}
+
+#pic_5 {
+    background-position: 0px -100px;
+}
+
+#pic_6 {
+    background-position: -100px -100px;
+}
+
+#pic_7 {
+    background-position: -200px -100px;
+}
+
+#pic_8 {
+    background-position: -300px -100px;
+}
+
+#pic_9 {
+    background-position: 0px -200px;
+}
+
+#pic_10 {
+    background-position: -100px -200px;
+}
+
+#pic_11 {
+    background-position: -200px -200px;
+}
+
+#pic_12 {
+    background-position: -300px -200px;
+}
+
+#pic_13 {
+    background-position:  0px -300px;
+}
+
+#pic_14 {
+    background-position: -100px -300px;
+}
+
+#pic_15 {
+    background-position: -200px -300px
+}
+
+#blank {
+    cursor: auto;
+    background: none;
+    border: none;
+}
+/* 定位类 */
+.PosX_1 {
+    left: 0;
+}
+
+.PosX_2 {
+    left: 100px;
+}
+
+.PosX_3 {
+    left: 200px;
+}
+
+.PosX_4 {
+    left: 300px;
+}
+
+.PosY_1 {
+    top: 0px;
+}
+
+.PosY_2 {
+    top: 100px;
+}
+
+.PosY_3 {
+    top: 200px;
+}
+
+.PosY_4 {
+    top: 300px;
+}
+#reminder {
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    width: 200px;
+    height: 230px;
+    background: url('../image/panda.jpg') no-repeat;
+    background-size: 200px 200px;
+    transition: all .5s ease-in;
+}
+#reminder span {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 30px;
+}
+/* 隐藏或放出目标图片 */
+.hide {
+    opacity: 0;
+}
+.come {
+    opacity: 1;
+}
+/* 设置按钮hover效果 */
+@keyframes breath {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1);
+    }
+    33% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4);
+    }
+    100%{
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1);
+    }    
+}
+/* 提示样式 */
+#tips {
+    position: absolute;
+    top: 150px;
+    right: -100px;
+    width: 300px;
+    height: 120px;
+    text-align: center;
+}
